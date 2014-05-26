@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EXTRATORModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TB_VEICULOS">
+          <Key>
+            <PropertyRef Name="ID_VEICULO" />
+          </Key>
+          <Property Name="ID_VEICULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NM_LOTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DS_VEICULO" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="VL_LANCE_INICIAL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NR_LANCES" Type="int" Nullable="false" />
+          <Property Name="VL_AVALIACAO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NR_VISITAS" Type="int" Nullable="false" />
+          <Property Name="NR_INSCRICAO_MINIMO" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="NM_LOCAL" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="DS_STATUS_VEICULO" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EXTRATORModelStoreContainer">
+          <EntitySet Name="TB_VEICULOS" EntityType="Self.TB_VEICULOS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EXTRATORModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TB_VEICULOS">
+          <Key>
+            <PropertyRef Name="ID_VEICULO" />
+          </Key>
+          <Property Name="ID_VEICULO" Type="Int32" Nullable="false" />
+          <Property Name="NM_LOTE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DS_VEICULO" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VL_LANCE_INICIAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NR_LANCES" Type="Int32" Nullable="false" />
+          <Property Name="VL_AVALIACAO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NR_VISITAS" Type="Int32" Nullable="false" />
+          <Property Name="NR_INSCRICAO_MINIMO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NM_LOCAL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DS_STATUS_VEICULO" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="EXTRATOREntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TB_VEICULOS" EntityType="Self.TB_VEICULOS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EXTRATORModelStoreContainer" CdmEntityContainer="EXTRATOREntities">
+          <EntitySetMapping Name="TB_VEICULOS">
+            <EntityTypeMapping TypeName="EXTRATORModel.TB_VEICULOS">
+              <MappingFragment StoreEntitySet="TB_VEICULOS">
+                <ScalarProperty Name="ID_VEICULO" ColumnName="ID_VEICULO" />
+                <ScalarProperty Name="NM_LOTE" ColumnName="NM_LOTE" />
+                <ScalarProperty Name="DS_VEICULO" ColumnName="DS_VEICULO" />
+                <ScalarProperty Name="VL_LANCE_INICIAL" ColumnName="VL_LANCE_INICIAL" />
+                <ScalarProperty Name="NR_LANCES" ColumnName="NR_LANCES" />
+                <ScalarProperty Name="VL_AVALIACAO" ColumnName="VL_AVALIACAO" />
+                <ScalarProperty Name="NR_VISITAS" ColumnName="NR_VISITAS" />
+                <ScalarProperty Name="NR_INSCRICAO_MINIMO" ColumnName="NR_INSCRICAO_MINIMO" />
+                <ScalarProperty Name="NM_LOCAL" ColumnName="NM_LOCAL" />
+                <ScalarProperty Name="DS_STATUS_VEICULO" ColumnName="DS_STATUS_VEICULO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

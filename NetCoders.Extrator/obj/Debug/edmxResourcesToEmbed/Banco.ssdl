@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EXTRATORModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_VEICULOS">
+    <Key>
+      <PropertyRef Name="ID_VEICULO" />
+    </Key>
+    <Property Name="ID_VEICULO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_LOTE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DS_VEICULO" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="VL_LANCE_INICIAL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NR_LANCES" Type="int" Nullable="false" />
+    <Property Name="VL_AVALIACAO" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NR_VISITAS" Type="int" Nullable="false" />
+    <Property Name="NR_INSCRICAO_MINIMO" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="NM_LOCAL" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="DS_STATUS_VEICULO" Type="varchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="EXTRATORModelStoreContainer">
+    <EntitySet Name="TB_VEICULOS" EntityType="Self.TB_VEICULOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

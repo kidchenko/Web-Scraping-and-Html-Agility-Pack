@@ -1,0 +1,9 @@
+﻿<Window x:Class="NetCoders.Extrator.Extracao"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Extracao" Height="300" Width="500">
+    <Grid>
+        <Button x:Name="btnExtrair" Content="EXTRACT NOW" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="120" Height="30" Click="btnExtrair_Click"/>
+
+    </Grid>
+</Window>
